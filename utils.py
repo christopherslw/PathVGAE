@@ -10,7 +10,7 @@ from scipy.stats import kendalltau
 
 
 def get_data_from_place(place, cf, mode='betweenness'):
-    G = ox.graph_from_place(place, network_type='all_private', custom_filter=cf)
+    G = ox.graph_from_place(place, network_type='all_private', custom_filter=cf) # 
     dual_G = nx.line_graph(G)
     gdf_nodes, gdf_edges = ox.graph_to_gdfs(G)
     gdf_nodes = gdf_nodes.reset_index()
